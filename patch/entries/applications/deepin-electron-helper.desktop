@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+X-Deepin-Vendor=user-custom
+Exec=/opt/apps/deepin-electron-helper/files/Electron/electron
+Icon=electron
+Name=Electron framework
+Name[zh_CN]=Electron 框架
+Categories=Development;
+Comment=The Electron framework lets you write cross-platform desktop applications using JavaScript, HTML and CSS.
+Keywords=css;html;JavaScript;development;
+Keywords[zh_CN]=css;html;JavaScript;development;开发;
+
+Terminal=false
+StartupNotify=true

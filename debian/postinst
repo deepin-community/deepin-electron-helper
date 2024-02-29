@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# SUID chrome-sandbox for Electron 5+
+chmod 4755 '/opt/apps/deepin-electron-helper/files/Electron/chrome-sandbox' || true
+

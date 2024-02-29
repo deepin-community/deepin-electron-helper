@@ -1,4 +1,27 @@
 #!/usr/bin/make -f
 
+PACKAGE_NAME := 
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 %:
 	dh $@
+override_dh_auto_build-arch: 
+	mkdir -p opt/apps/deepin-electron-helper/files/
+
+	bash package_action.sh $(shell ls | grep electron-v*-linux-x64.zip)
+
+override_dh_auto_install-arch:
+	dh_auto_install
+
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
+
+override_dh_strip:
+
+override_dh_strip_nondeterminism:
+
+override_dh_installchangelogs:
+
+override_dh_installdocs:
+
+override_dh_auto_clean:
+	dh_auto_clean
